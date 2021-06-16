@@ -72,6 +72,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# (The below instructions are intended for common# shell setups. See the README for more guidance# if they don't apply and/or don't work for you.)
+# Add pyenv executable to PATH and# enable shims by adding the following# to ~/.profile and ~/.zprofile:
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+# Load pyenv into the shell by adding
+# the following to ~/.zshrc
+eval "$(pyenv init -)"
+#ASDF Setup
+$HOME/.asdf/asdf.sh
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -102,7 +112,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
